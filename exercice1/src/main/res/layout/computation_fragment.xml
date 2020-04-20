@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text=""
+        android:id="@+id/title"
+        tools:ignore="MissingConstraints"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/numberA"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:hint="Premier nombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/numberB"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberA"
+        android:hint="Second nombre"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/numberB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="="
+        android:textSize="50dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result"
+        app:layout_constraintHeight_percent="0.30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_height="0dp"
+        android:layout_width="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

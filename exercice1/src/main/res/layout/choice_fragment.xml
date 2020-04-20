@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/operationParent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:tag="more"
+        android:id="@+id/buttonMore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="+"
+        android:textSize="50dp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <Button
+        android:tag="less"
+        android:id="@+id/buttonLess"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonMore"
+        android:text="-"
+        android:textSize="50dp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <Button
+        android:tag="divise"
+        android:id="@+id/buttonDivise"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/buttonMore"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="/"
+        android:textSize="50dp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <Button
+        android:tag="multip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/buttonLess"
+        app:layout_constraintLeft_toRightOf="@id/buttonDivise"
+        android:text="x"
+        android:textSize="50dp"
+        android:textColor="@color/colorAccent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

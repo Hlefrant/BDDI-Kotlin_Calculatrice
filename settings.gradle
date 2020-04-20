@@ -1,2 +1,5 @@
 rootProject.name='Calculette'
 include ':app'
+include ':myapplication'
+include ':exercice1'
+include ':exercice2'
