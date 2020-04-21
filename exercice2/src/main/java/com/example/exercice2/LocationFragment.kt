@@ -22,6 +22,7 @@ import com.google.android.gms.location.LocationServices
 class LocationFragment : Fragment() {
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    val requestCodePermissions: Int = 2
 
     val positiveButtonClick = { dialog: DialogInterface, which: Int ->
         Toast.makeText(
@@ -98,7 +99,7 @@ class LocationFragment : Fragment() {
         val result = view?.findViewById<TextView>(R.id.location)
         if (result != null) {
             when (requestCode) {
-                2 -> {
+                requestCodePermissions -> {
                     if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                         //La permission est accordée, on adapte la vue en conséquence
                             displayLocation(result)
@@ -115,9 +116,10 @@ class LocationFragment : Fragment() {
     }
 
     private fun requestPermissions() {
+
         requestPermissions(
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-            2
+            requestCodePermissions
         )
     }
 
